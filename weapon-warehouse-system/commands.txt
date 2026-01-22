@@ -1,0 +1,3 @@
+docker build -t naftali96/api-mysql:v1 .\weapon-warehouse-system\app\
+
+docker push naftali96/api-mysql:v1
