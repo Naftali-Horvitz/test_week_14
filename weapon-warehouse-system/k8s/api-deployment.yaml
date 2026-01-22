@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    app: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: naftali96/api-mysql:v1
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_HOST
+          value: "mysql-headless"    
+        - name: DB_PORT
+          value: "3306"              
+        - name: DB_NAME
+          value: "weather_db"        
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASSWORD
+          value: "YourStrongPassword"
+
