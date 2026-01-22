@@ -3,15 +3,11 @@ import os
 import pandas as pd
 
 
-db_host = os.getenv('DB_HOST', 'localhost')
-db_user = os.getenv('DB_USER', 'root')
-db_password = os.getenv('DB_PASSWORD')
-db_name = os.getenv('DB_NAME')
+db_password = os.getenv('MYSQL_ROOT_PASSWORD')
+db_name = os.getenv('MYSQL_DATABASE')
 
 def get_conn():
     return mysql.connector.connect(
-    host=db_host,
-    user=db_user,
     password=db_password,
     database=db_name
 )

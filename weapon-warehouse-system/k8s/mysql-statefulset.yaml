@@ -17,10 +17,10 @@ spec:
       - name: mysql
         image: mysql:8.0
         env:
-        - name: PASSWORD
+        - name: MYSQL_ROOT_PASSWORD
           value: "password" 
-        - name: DB_NAME
-          value: "weather_db"
+        - name: MYSQL_DATABASE
+          value: "Weapons_db"
         ports:
         - containerPort: 3306
           name: mysql

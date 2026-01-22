@@ -6,7 +6,7 @@ metadata:
     app: service-api
 spec:
   ports:
-    - port: 8000
-      targetPort: 8000
+    - port: 8008
+      targetPort: 8008
   selector:
-    app: service-api
+    app: api

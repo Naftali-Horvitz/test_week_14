@@ -1,3 +1,9 @@
-docker build -t naftali96/api-mysql:v1 .\weapon-warehouse-system\app\
+docker build -t naftali96/api-mysql:v4 .\weapon-warehouse-system\app\
 
-docker push naftali96/api-mysql:v1
+docker push naftali96/api-mysql:v4
+
+oc apply -f .\weapon-warehouse-system\k8s\
+
+oc expose svc service-api
+
+ oc get routes

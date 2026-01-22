@@ -1,1 +1,1 @@
-# test_week_14
+#The application receives a csv file, handles empty fields, converts to a pandas object, adds a column that classifies the weapons by level, and saves to the database.
